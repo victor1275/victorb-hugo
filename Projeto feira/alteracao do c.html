@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>cadastro do Centro Interesse</title>
+<!-- As duas linhas baixo servem para importar o bootstrap -->
+<link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="container">
+		<h1 class="thumbnail" id="h1-inscricao">alteracao
+			do Centro Interesse</h1>
+		<form>
+
+			<div class="form-group">
+				<label for="nome">Nome do ci:</label>
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" />
+			</div>
+			<div class="form-group">
+				<label for="descricao">descricão </label>
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" />
+			</div>
+			<div class="form-group">
+				<label for="orientador">editar orientador</label>
+				<input type="email" class="form-control" placeholder="Insira..."
+					id="e-mail" name="e-mail" required />
+			
+			<div class="form-group">
+				<label for="quantidade-de-vagas">quantidade de vagas </label>
+				<input type="number" class="form-control" />
+			<div class="form-group">
+				<label for="horario-inicio-termino"> editar horario de inicio</label>
+				<input type="time" class="form-control" />
+				<label for="horario-inicio-termino">editar horario de termino</label>
+				<input type="time" class="form-control" />
+			</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<INPUT TYPE="checkbox" NAME="TERMO DE DECLARAÇÃO" VALUE="IE3" />Declaro
+					estar ciente, que não poderei trocar de centro de interesse durante
+					o semestre.
+				</div>
+			</div>
+				<INPUT TYPE="button" VALUE="CANCELAR" class="btn btn-danger" /><INPUT
+					TYPE="submit" VALUE="CONFIRMAR" class="btn btn-success" />
+			
+		</form>
+	</div>
+</body>
+</html>

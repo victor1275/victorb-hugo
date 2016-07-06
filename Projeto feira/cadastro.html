@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Inscrição do Centro Interesse</title>
+<title>cadastro do Centro Interesse</title>
 <!-- As duas linhas baixo servem para importar o bootstrap -->
 <link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1 class="thumbnail" id="h1-inscricao"> Inscrição
+		<h1 class="thumbnail" id="h1-inscricao">cadastro
 			do Centro Interesse</h1>
 		<form>
 
@@ -19,41 +19,23 @@
 				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" />
 			</div>
 			<div class="form-group">
-				<label for="codigo-do-aluno">Código do aluno </label>
+				<label for="descricao">descricão </label>
 				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" /><br>
 			</div>
 			<div class="form-group">
-				<label for="e-mail">E-mail </label>
+				<label for="orientador">orientador </label>
 				<input type="email" class="form-control" placeholder="Insira..."
 					id="e-mail" name="e-mail" required />
-			</div>
+			
 			<div class="form-group">
-				<label for="CENTRO DE INTERESSE1">CENTRO DE INTERESSE1 </label> 
-				
-				<SELECT
-					ID="centrodeinsteresse" class="form-control">
-					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">futsal</option>
-				</SELECT>
-			</div>
+				<label for="quantidade-de-vagas">quantidade-de-vagas </label>
+				<input type="number" class="form-control" />
 			<div class="form-group">
-				<label for="CENTRO DE INTERESSE2">CENTRO DE INTERESSE2 </label>
-				
-				<SELECT
-					ID="centrodeinsteresse" class="form-control">
-					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">Futsal</option>
-				</SELECT>
+				<label for="horario-inicio-termino">horario de inicio</label>
+				<input type="time" class="form-control" />
+				<label for="horario-inicio-termino">horario de termino</label>
+				<input type="time" class="form-control" />
+			</div>
 			</div>
 			<div class="form-group">
 				<div class="checkbox">
