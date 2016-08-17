@@ -11,7 +11,16 @@
 	/*configuraçao do banco de dados*/
 	$nome_banco= "bd_centro_interesse";
 	
-	$conexao = mysql_conect($servidor,$usuario,$senha);
+	$conexao = mysql_connect($servidor, $usuario, $senha);
 	
-	$banco = mysql_select_bd($_banco,$conexao);
+	$banco = mysql_select_db($nome_banco,$conexao);
+	
+	/*verificar se a conexao realmente foi criada*/
+	/*se (nao conexao) entao, ou seja,  conexao e falsa*/
+	if (!$conexao) {
+		echo "nao foi posivel conectar ao banco de dados mysql.";
+		exit;
+	}else{/*senao*/
+	echo " conectou!";
+	}
 ?>
