@@ -13,47 +13,45 @@
 	<div class="container">
 		<h1 class="thumbnail" id="h1-inscricao"> Inscrição
 			do Centro Interesse</h1> 
-         <form id="formulario" action="salvarinscricao.php" role="post">0 
+         <form id="formulario" action="salvarinscricao.php" role="post"> 
 			
 			<div class="form-group">
-				<label for="nome">Nome </label>
-				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" />
+				<label for="nome">Nome:</label>
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" name="nome" />
 			</div>
 			<div class="form-group">
-				<label for="codigo-do-aluno">Código do aluno </label>
-				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" /><br>
+				<label for="codigo-do-aluno">Código do aluno: </label>
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" name="codigodoaluno" />
 			</div>
 			<div class="form-group">
-				<label for="e-mail">E-mail </label>
-				<input type="email" class="form-control" placeholder="Insira..."
-					id="e-mail" name="e-mail" required />
+				<label for="turma">Turma:</label>
+				<input type="turma" class="form-control" placeholder="Insira..." id="turma" name="turma" />
 			</div>
 			<div class="form-group">
-				<label for="CENTRO DE INTERESSE1">CENTRO DE INTERESSE1 </label> 
-				
+				<label for="CENTRO DE INTERESSE1">CENTRO DE INTERESSE 1:</label> 
 				<SELECT
-					ID="centrodeinsteresse" class="form-control">
+					ID="centrodeinsteresse" name="opcao1"  class="form-control">
 					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">futsal</option>
+					<OPTION VALUE="0">Música</option>
+					<OPTION VALUE="1">Teatro</option>
+					<OPTION VALUE="2">Espanhol</option>
+					<OPTION VALUE="3">Inglês</option>
+					<OPTION VALUE="4">Dança</option>
+					<OPTION VALUE="5">futsal</option>
 				</SELECT>
 			</div>
 			<div class="form-group">
-				<label for="CENTRO DE INTERESSE2">CENTRO DE INTERESSE2 </label>
+				<label for="CENTRO DE INTERESSE2">CENTRO DE INTERESSE 2:</label>
 				
 				<SELECT
-					ID="centrodeinsteresse" class="form-control">
+					ID="centrodeinsteresse"name="opcao2" class="form-control">
 					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">Futsal</option>
+					<OPTION VALUE="0">Música</option>
+					<OPTION VALUE="1">Teatro</option>
+					<OPTION VALUE="2">Espanhol</option>
+					<OPTION VALUE="3">Inglês</option>
+					<OPTION VALUE="4">Dança</option>
+					<OPTION VALUE="5">Futsal</option>
 				</SELECT>
 			</div>
 			<div class="form-group">
