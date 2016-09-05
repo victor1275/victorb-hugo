@@ -2,7 +2,6 @@
 	
 	
 	$podeinserir=true;
-	$codigoaceito=true;
 	$nome = $_POST['nome'];
 	$codigo=  $_POST['meucodigo'];
 	$turma = $_POST['turma'];
@@ -42,10 +41,10 @@
 		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
 		echo $error;
 	}
-	
-	
 	$itembancodados = mysql_fetch_array($resultado);
 	$qtdevagas1 = $itembancodados['quantidade_vagas'];
+	
+	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE opcao_um=".$opcao1;
 	$resultado = mysql_query($comandosql);
 	$itembancodados = mysql_fetch_assoc($resultado);
@@ -87,29 +86,26 @@
 	}
 	
 	/*verifique o codigo do aluno*/
-	$comandosql = "SELECT código_aluno FROM tb_inscricao WHERE código_aluno = ".$codigo;
-	$resultado = mysql_query($comandosql);
+// 	$comandosql = "SELECT código_aluno FROM tb_inscricao WHERE código_aluno = ".$codigo;
+// 	$resultado = mysql_query($comandosql);
 	
-	if (mysql_errno()) {
-		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
-		echo $error;
-	}
-	$itembancodados = mysql_fetch_array($resultado);
-	$codigodatabela = $itembancodados['código_aluno'];
+// 	if (mysql_errno()) {
+// 		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
+// 		echo $error;
+// 	}
+// 	$itembancodados = mysql_fetch_array($resultado);
+// 	$codigodatabela = $itembancodados['código_aluno'];
 	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE código_aluno=".$codigo;
 	$resultado = mysql_query($comandosql);
 	$itembancodados = mysql_fetch_assoc($resultado);
-	$codigodoaluno = $itembancodados['total'];
+	$qtdecodigodoaluno = $itembancodados['total'];
 
-	if ($codigodoaluno = $codigodoaluno){
+	if ($qtdecodigodoaluno >=1 ){
 		echo "<h1>Esse código do aluno ja esta cadastrado, tente novamente</h1>";
 		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
-		$codigoaceito=false;
-	}
-	
-	
-	
+		$podeinserir=false;
+	}	
 	if($podeinserir){	
 
 		$comandosql = "INSERT INTO tb_inscricao VALUES ('','$codigo', '$nome', '$turma', '$opcao1','$opcao2', '2016-08-24', '07:10:00')";		
@@ -128,3 +124,4 @@
 	}
 	mysql_close();
 ?>
+

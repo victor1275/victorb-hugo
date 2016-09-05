@@ -4,10 +4,35 @@
 <title>Inscrição do Centro Interesse</title>
 <!-- As duas linhas baixo servem para importar o bootstrap -->
 <link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
 <script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
-
 <link rel="stylesheet" type="text/css" href="style.css" />
+
+<script>
+	function SomenteNumero(e) {
+		var tecla = (window.event) ? event.keyCode : e.which;
+		if ((tecla > 47 && tecla < 58))
+			return true;
+		else {
+			if (tecla == 8 || tecla == 0)
+				return true;
+			else
+				return false;
+		}
+	}
+	
+	
+	function SomenteLetra(e) {
+		var tecla = (window.event) ? event.keyCode : e.which;
+		if ((tecla > 64 && tecla < 91) || (tecla > 96 && tecla < 123))
+			return true;
+		else {
+			if (tecla == 8 || tecla == 0)
+				return true;
+			else
+				return false;
+		}
+	}
+</script>
 </head>
 <body>
 	<div class="container">
@@ -17,14 +42,15 @@
 			
 			<div class="form-group">
 				<label for="nome">Nome:</label>
-				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" name="nome" />
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="nome" name="nome" 
+onkeypress='return SomenteLetra(event)'/>
 			</div>
 			<div class="form-group">
 				<label for="codigo-do-aluno">Código do aluno: </label>
-				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" name="meucodigo" />
+				<INPUT TYPE="text" class="form-control" placeholder="Insira..." id="codigo-do-aluno" name="meucodigo" onkeypress='return SomenteNumero(event)'/>
 			</div>
 			<div class="form-group">
-				<label for="turma">Turma:</label>
+				<label for="turma">Turma:</label>''''''''
 				<input type="text" class="form-control" placeholder="Insira..." id="turma" name="turma" />
 			</div>
 			<div class="form-group">
